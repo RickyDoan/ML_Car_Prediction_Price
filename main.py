@@ -17,7 +17,7 @@ st.markdown(
         font-weight: black;
     }
     </style>
-    <h1 class="custom-title">Car Price Prediction App Australia Market </h1>
+    <h1 class="custom-title">Car Price Prediction Australia Market App </h1>
     """,
     unsafe_allow_html=True
 )
