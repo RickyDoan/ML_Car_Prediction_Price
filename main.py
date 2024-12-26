@@ -54,15 +54,6 @@ with col1:
     chosen_gearbox = st.selectbox("Gearbox", options=gearbox_options, key="gearbox")
 
 with col2:
-    # Dropdown for Fuel Type
-    fuel_options = sorted(df['fuel'].unique())
-    chosen_fuel = st.selectbox("Fuel Type", options=fuel_options, key="fuel")
-
-    # Dropdown for Color
-    color_options = sorted(df['color'].unique())
-    chosen_color = st.selectbox("Color", options=color_options, key="color")
-
-with col3:
     # Dropdown for Status
     status_options = sorted(df['status'].unique())
     chosen_status = st.selectbox("Status", options=status_options, key="status")
@@ -77,10 +68,23 @@ with col3:
         key="kilometers"
     )
 
+
+
+with col3:
+    # Dropdown for Fuel Type
+    fuel_options = sorted(df['fuel'].unique())
+    chosen_fuel = st.selectbox("Fuel Type", options=fuel_options, key="fuel")
+
+    # Dropdown for Color
+    color_options = sorted(df['color'].unique())
+    chosen_color = st.selectbox("Color", options=color_options, key="color")
+
 with col4:
     # Dropdown for Engine CC (sorted ascending)
-    cc_options = sorted(df['cc'].unique(), reverse=not sort_cc_descending)  # Sort engine capacities ascending
+    cc_options = sorted(df['cc'].unique(), reverse= sort_cc_descending)  # Sort engine capacities ascending
     chosen_cc = st.selectbox("Engine CC", options=cc_options, key="cc")
+
+
 
 list_columns = ['brand', 'name', 'model', 'year', 'kilometers', 'gearbox', 'fuel',
        'status', 'cc', 'color', 'price']
