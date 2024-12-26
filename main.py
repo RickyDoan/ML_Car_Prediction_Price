@@ -54,10 +54,6 @@ with col1:
     chosen_gearbox = st.selectbox("Gearbox", options=gearbox_options, key="gearbox")
 
 with col2:
-    # Dropdown for Status
-    status_options = sorted(df['status'].unique())
-    chosen_status = st.selectbox("Status", options=status_options, key="status")
-
     # Input for Kilometers (step 10,000, min = 1, max = 1,100,000)
     chosen_kilometers = st.number_input(
         "Kilometers",
@@ -67,6 +63,12 @@ with col2:
         value=10_000,  # Default value
         key="kilometers"
     )
+
+    # Dropdown for Status
+    status_options = sorted(df['status'].unique())
+    chosen_status = st.selectbox("Status", options=status_options, key="status")
+
+
 
 
 
