@@ -60,7 +60,7 @@ with col2:
         min_value=1,
         max_value=1_100_000,
         step=10_000,
-        value=10_000,  # Default value
+        value=50_000,  # Default value
         key="kilometers"
     )
 
