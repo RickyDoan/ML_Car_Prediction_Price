@@ -81,11 +81,20 @@ with col3:
     color_options = sorted(df['color'].unique())
     chosen_color = st.selectbox("Color", options=color_options, key="color")
 
+# with col4:
+#     # Dropdown for Engine CC (sorted ascending)
+#     cc_options = sorted(df['cc'].unique(), reverse= sort_cc_descending)  # Sort engine capacities ascending
+#     chosen_cc = st.selectbox("Engine CC", options=cc_options, key="cc")
 with col4:
-    # Dropdown for Engine CC (sorted ascending)
-    cc_options = sorted(df['cc'].unique(), reverse= sort_cc_descending)  # Sort engine capacities ascending
-    chosen_cc = st.selectbox("Engine CC", options=cc_options, key="cc")
-
+    # Slider for Engine CC
+    chosen_cc = st.slider(
+        "Engine CC",
+        min_value=0.9,  # Minimum value of 0.9
+        max_value=7.4,  # Maximum value of 7.4
+        step=0.1,  # Increment step of 0.1
+        value=2.0,  # Default value set to 2.0
+        key="cc"
+    )
 
 
 list_columns = ['brand', 'name', 'model', 'year', 'kilometers', 'gearbox', 'fuel',
@@ -106,7 +115,7 @@ if st.button("Predict Car Price"):
         "color": [chosen_color]
     })
     predict = pipline.predict(dataframe)
-    st.success(f"Price Estimation: $ {round(predict[0]):,}")
+    st.success(f"Price Estimation: AU$ {round(predict[0]):,}")
     if not st.session_state.message_shown:
         st.success("Change some details and play with the app!")
         st.session_state.message_shown = True
