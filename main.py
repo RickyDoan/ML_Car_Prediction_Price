@@ -13,8 +13,8 @@ st.markdown(
     .custom-title {
         font-size: 28px;
         text-align: left;
-        color: blue;
-        font-weight: bold;
+        color: white;
+        font-weight: black;
     }
     </style>
     <h1 class="custom-title">Car Price Prediction App <br> Australia Market </h1>
