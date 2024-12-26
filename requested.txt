@@ -1,0 +1,17 @@
+1/ Collecting data
+2/ Cleaning data
+- Avoid data leakage --> Split data
+- Check N/A Value
+- Check Duplicated value
+- Check dtype values
+- Check spelling
+- Check outliers values
+3/ EDA
+- Plot countplot
+- Plot histplot
+- pairplot, boxplot
+4/ Feature engineering
+- Check corr()
+- apply MinMaxScaler, StandardScaler.
+- Check IV --> Get impact feature
+5/ Train Model
