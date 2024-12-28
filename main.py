@@ -7,22 +7,22 @@ pipline = load("artifact/pipline.joblib")
 df = load("artifact/df.joblib")
 
 # st.title("Car Price Prediction Australia Market App")
-st.markdown(
-    """
-    <style>
-    .custom-title {
-        font-size: 28px;
-        text-align: left;
-        color: white;
-        font-weight: black;
-    }
-    </style>
-    <h1 class="custom-title">Car Price Prediction Australia Market App </h1>
-    """,
-    unsafe_allow_html=True
-)
-st.markdown("<h5 style='text-align: left; color: white;'>Enter Car Details</h5>", unsafe_allow_html=True)
-
+# st.markdown(
+#     """
+#     <style>
+#     .custom-title {
+#         font-size: 28px;
+#         text-align: left;
+#         color: white;
+#         font-weight: black;
+#     }
+#     </style>
+#     <h1 class="custom-title">Car Price Prediction Australia Market App </h1>
+#     """,
+#     unsafe_allow_html=True
+# )
+# st.markdown("<h5 style='text-align: left; color: white;'>Enter Car Details</h5>", unsafe_allow_html=True)
+st.title("Car Price Prediction Australia Market App")
 # Config for sorting descending where needed
 sort_year_descending = True
 sort_cc_descending = True
